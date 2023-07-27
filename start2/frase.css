@@ -41,17 +41,17 @@ body {
 
 .word1 {
   opacity: 1;
-  animation: change-words1 5s 1 forwards;
+  animation: change-words 5s 1 forwards;
 }
 
 .word2 {
   opacity: 0;
-  animation: change-words2 5s 3.5s 1 forwards linear;
+  animation: change-words 5s 3.5s 1 forwards linear;
 }
 
 .word3 {
   opacity: 0;
-  animation: change-words3 5s 7.5s 1 linear;
+  animation: change-words 5s 7.5s 1 linear;
 }
 
 /* @keyframes change-words1 {
@@ -65,7 +65,7 @@ body {
     opacity: 0;
   }
 } */
-@keyframes change-words1 {
+@keyframes change-words {
   from {
     transform: translateY(-10px);
     opacity: 0;
@@ -90,7 +90,7 @@ body {
         opacity: 0;
     }
 } */
-@keyframes change-words2 {
+/* @keyframes change-words2 {
   from {
     transform: translateY(-10px);
     opacity: 0;
@@ -103,7 +103,7 @@ body {
     transform: translateY(5px);
     opacity: 0;
   }
-}
+} */
 
 /* @keyframes change-words3 {
   from {
@@ -117,7 +117,7 @@ body {
   }
 } */
 
-@keyframes change-words3 {
+/* @keyframes change-words3 {
   from {
     transform: translateY(-10px);
     opacity: 0;
@@ -130,4 +130,4 @@ body {
     transform: translateY(5px);
     opacity: 0;
   }
-}
+} */
