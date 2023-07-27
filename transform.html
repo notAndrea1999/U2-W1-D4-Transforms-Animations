@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Transform properties</title>
+    <style>
+      .container {
+        max-width: 900px;
+        margin-inline: auto;
+        margin-top: 100px;
+        border: 2px solid rgb(201, 201, 201);
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightslategray;
+      }
+
+      #n1 {
+        transform: translate(20px, -20px);
+      }
+
+      #n2 {
+        transform: rotateX(38deg) rotateY(51deg);
+      }
+
+      #n3 {
+        transform: skewX(50deg) skewY(10deg) scale(1.6);
+      }
+
+      #n4 {
+        transform: scale(1.2);
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div id="n1" class="box">TRANSLATE</div>
+      <div id="n2" class="box">ROTATE</div>
+      <div id="n3" class="box">SKEW</div>
+      <div id="n4" class="box">SCALE</div>
+    </div>
+  </body>
+</html>

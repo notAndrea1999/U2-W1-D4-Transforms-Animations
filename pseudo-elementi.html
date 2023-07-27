@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo-elements</title>
+    <style>
+      .container {
+        max-width: 900px;
+        margin-inline: auto;
+        margin-top: 100px;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightslategray;
+      }
+
+      .box.box-alternativo::before {
+        content: "❌";
+      }
+
+      .box.box-alternativo::after {
+        content: "👈👈";
+      }
+
+      ul li::marker {
+        content: "✨";
+      }
+
+      a[href^="http:"] {
+        color: red;
+      }
+
+      a[href^="http:"]::after {
+        content: "🔗⚠️🔓";
+      }
+
+      a[href^="https:"] {
+        color: green;
+      }
+
+      a[href^="https:"]::after {
+        content: "🔗✅🔒";
+      }
+
+      a[href$=".jpg"]::after {
+        content: "🖼️";
+      }
+
+      a[href$=".pdf"]::after {
+        content: "📃";
+      }
+
+      input[placeholder~="email"] {
+        border: 2px solid red;
+      }
+
+      input[placeholder*="name"] {
+        border: 2px solid blue;
+      }
+
+      div[class*="box-"] {
+        border: 2px solid salmon;
+      }
+
+      .box-generativo {
+        position: relative;
+      }
+
+      .box-generativo span {
+        background-color: black;
+        color: white;
+      }
+
+      .box-generativo::before {
+        content: "";
+        /* display: inline-block; */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        left: -10px;
+        background-color: red;
+      }
+
+      .box-generativo::after {
+        content: "";
+        /* display: inline-block; */
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        right: -10px;
+        background-color: green;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box box-alternativo" style="display: none">testo reale</div>
+      <div class="box box-generativo"><span>TESTO</span></div>
+    </div>
+    <ul>
+      <li>elemento</li>
+      <li>elemento</li>
+      <li>elemento</li>
+      <li>elemento</li>
+      <li>elemento</li>
+    </ul>
+
+    <a href="http://epicode.com">vai a epicode</a>
+    <a href="https://google.com">vai a google</a>
+    <a href="https://unsplash.com/forest.jpg">apri immagine</a>
+    <a href="https://epicode.com/u2-d4.pdf">apri documento</a>
+
+    <input type="text" placeholder="inserisci la tua email" />
+    <input type="text" placeholder="inserisci il tuo name" />
+    <input type="text" placeholder="inserisci il tuo username" />
+  </body>
+</html>

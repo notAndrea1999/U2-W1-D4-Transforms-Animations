@@ -1,0 +1,81 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Indie Flower", cursive;
+}
+
+.container {
+  margin: 30px;
+  width: 1500px;
+  height: 600px;
+  background-color: #666666;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.box {
+  width: 300px;
+  height: 200px;
+  margin-block: 10px;
+  margin-inline: 10px;
+  box-shadow: 0px 5px 10px rgb(0 0 0 / 50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to top, rgba(61, 60, 60, 0.466), transparent);
+}
+
+.box {
+  transition: all 500ms;
+}
+
+#n1,
+#n5,
+#n7 {
+  background-color: #f2f3bf;
+  transform: rotate(-6deg);
+}
+
+#n2,
+#n4,
+#n8 {
+  background-color: #c1efc4;
+  transform: rotate(6deg);
+}
+
+#n4 {
+  translate: 0 -20px;
+}
+
+#n3,
+#n6 {
+  background-color: #bfc0e6;
+  transform: rotate(-6deg);
+}
+
+.box h2 {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.box p {
+  font-size: 25px;
+  margin-top: 5px;
+}
+
+#n1:hover,
+#n2:hover,
+#n3:hover,
+#n4:hover,
+#n5:hover,
+#n6:hover,
+#n7:hover,
+#n8:hover {
+  scale: 1.3;
+  transform: rotate(0deg);
+  box-shadow: 10px 10px 5px rgb(0 0 0 / 65%);
+}

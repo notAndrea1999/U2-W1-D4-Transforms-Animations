@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        animation: fadeIn 3s 3s both;
+        /* 
+            fill mode "both" include:
+            backwards - per applicare il primo keyframe anche durante il decorso del delay
+            forwards - per mantenere applicato l'ultimo keyframe anche dopo che l'animazione si è conclusa
+            */
+      }
+
+      @keyframes fadeIn {
+        0% {
+          opacity: 0;
+        }
+
+        100% {
+          opacity: 1;
+          background-color: black;
+          color: white;
+        }
+      }
+
+      .container {
+        max-width: 900px;
+        margin-inline: auto;
+        margin-top: 100px;
+        border: 2px solid rgb(201, 201, 201);
+        overflow: hidden;
+      }
+
+      .box {
+        width: 100px;
+        height: 100px;
+        background-color: lightslategray;
+        transform: translateX(-50px);
+      }
+
+      .animateBox {
+        animation: changeBox 2s infinite backwards;
+      }
+
+      @keyframes changeBox {
+        from {
+          transform: translate(-100px, 0%);
+          background-color: blue;
+        }
+
+        25% {
+          transform: translate(300px, -20%);
+        }
+
+        75% {
+          transform: translate(600px, 20%);
+        }
+
+        to {
+          transform: translate(900px, 0%);
+          background-color: red;
+        }
+      }
+
+      button {
+        border: 2px solid transparent;
+        background-color: rgb(29, 29, 29);
+        color: white;
+        border-radius: 3px;
+        display: block;
+        margin-top: 2rem;
+        padding: 1rem 3rem;
+        margin-inline: auto;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: black;
+        border: 2px solid cyan;
+      }
+
+      button:active {
+        background-color: black;
+        scale: 0.95;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <div class="box">Content</div>
+    </div>
+    <button onclick="animateBox(event)">animate box</button>
+
+    <script>
+      const animateBox = (e) => {
+        const box = document.querySelector(".box");
+        box.classList.toggle("animateBox");
+        if (box.classList.contains("animateBox")) {
+          e.target.innerText = "stop animation";
+        } else {
+          e.target.innerText = "animate box";
+        }
+      };
+    </script>
+  </body>
+</html>
